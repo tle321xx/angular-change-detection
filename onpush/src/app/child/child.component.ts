@@ -14,7 +14,9 @@ export class ChildComponent implements OnInit {
   // 1.
   countsubscription !: Subscription;
   // 2.
-  constructor(private cd: ChangeDetectorRef) { }
+  constructor(private cd: ChangeDetectorRef) {
+    console.log(cd)
+   }
 
   ngOnInit(): void {
     this.countsubscription = this.Counter.subscribe(
